@@ -10,9 +10,10 @@
     <androidx.constraintlayout.helper.widget.Flow
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:constraint_referenced_ids="card1,card2,card3,card4,card5,card6,card7,card8,card9"
+        app:flow_horizontalAlign="end"
         app:flow_horizontalGap="12dp"
-        app:flow_verticalAlign="top"
         app:flow_verticalGap="12dp"
         app:flow_wrapMode="chain"
         app:layout_constraintEnd_toEndOf="parent"
@@ -116,7 +117,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingHorizontal="24dp"
-            android:paddingVertical="28dp"
+            android:paddingVertical="40dp"
             android:text="Card 7" />
     </com.google.android.material.card.MaterialCardView>
 
@@ -130,7 +131,8 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="16dp"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="52dp"
             android:text="Card 8" />
     </com.google.android.material.card.MaterialCardView>
 
