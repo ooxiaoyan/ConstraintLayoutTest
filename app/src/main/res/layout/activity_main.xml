@@ -196,4 +196,14 @@
         android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/flow" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/motionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="MotionLayout"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toEndOf="@+id/layerButton"
+        app:layout_constraintTop_toBottomOf="@+id/flow" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package pers.xiaoyan.constraintlayouttest
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -16,6 +17,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.layerButton.setOnClickListener {
             binding.layer.visibility = View.VISIBLE
+        }
+        binding.motionButton.setOnClickListener {
+            val intent = Intent(this@MainActivity, MotionActivity::class.java)
+            startActivity(intent)
         }
     }
 }
