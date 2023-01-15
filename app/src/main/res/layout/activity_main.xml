@@ -7,21 +7,29 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flow流式布局"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.constraintlayout.helper.widget.Flow
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
+        android:layout_height="wrap_content"
         app:constraint_referenced_ids="card1,card2,card3,card4,card5,card6,card7,card8,card9"
         app:flow_horizontalAlign="end"
+        app:flow_horizontalBias="0"
         app:flow_horizontalGap="12dp"
-        app:flow_maxElementsWrap="3"
+        app:flow_horizontalStyle="packed"
         app:flow_verticalGap="12dp"
-        app:flow_verticalStyle="packed"
         app:flow_wrapMode="chain"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card1"
