@@ -4,21 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     tools:context=".MainActivity">
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/layer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_200"
+        android:visibility="gone"
+        app:constraint_referenced_ids="tvTitle,ivTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
 
     <TextView
         android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Layer 层布局"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivTitle"
+        app:layout_constraintEnd_toStartOf="@+id/ivTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivTitle" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Flow流式布局"
+        android:layout_margin="16dp"
+        android:src="@mipmap/ic_launcher"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
         app:constraint_referenced_ids="card1,card2,card3,card4,card5,card6,card7,card8,card9"
         app:flow_horizontalAlign="end"
         app:flow_horizontalBias="0"
@@ -161,4 +187,13 @@
             android:text="Card 9" />
     </com.google.android.material.card.MaterialCardView>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/layerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Layer"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flow" />
 </androidx.constraintlayout.widget.ConstraintLayout>
