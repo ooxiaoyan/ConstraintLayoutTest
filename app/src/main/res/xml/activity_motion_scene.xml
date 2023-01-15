@@ -10,6 +10,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/ivAction2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
@@ -19,6 +26,13 @@
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
+        <Constraint
+            android:id="@+id/ivAction2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </ConstraintSet>
 
     <Transition
@@ -63,6 +77,15 @@
                 android:rotation="90"
                 app:framePosition="60"
                 app:motionTarget="@+id/ivAction" />
+
+            <KeyCycle
+                android:rotation="0"
+                android:translationY="-50dp"
+                app:framePosition="100"
+                app:motionTarget="@+id/ivAction2"
+                app:waveOffset="45"
+                app:wavePeriod="1"
+                app:waveShape="sin" />
         </KeyFrameSet>
     </Transition>
 </MotionScene>
